@@ -1,0 +1,7 @@
+*~
+*.db
+*.o
+*.pyc
+*.pyo
+*.bak
+*.cache
