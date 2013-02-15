@@ -28,5 +28,6 @@ print "Here is a puzzle"
 
 what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 
-# -4391
+# -4391, Did it by hand
 print "That becemes: ", what, "Can you do it by hand?"
+
