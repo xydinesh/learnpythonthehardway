@@ -17,7 +17,11 @@ print "-------------------"
 
 # Some arithmatic
 five = 10 - 2 + 3 - 6
-print "This should 
+# Broke the program and then fixed it
+# print "This should
+# be five: %s" % five
+
+print "This should\
 be five: %s" % five
 
 # definition of secret formula
