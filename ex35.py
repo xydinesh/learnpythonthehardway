@@ -1,14 +1,16 @@
 from sys import exit
 
 def gold_room():
+    """
+    Dealing with gold in the room.
+    """
     print "This room is full of gold. How much do you take?"
 
-    next = raw_input("> ")
-    if "0" in next or "1" in next:
-        how_much = int(next)
-    else:
+    next = int(raw_input("> "))
+    if not next > 0:
         dead("Man, learn to type a number.")
 
+    how_much = next
     if how_much < 50:
         print "Nice, you are not greedy, you win!"
         exit(0)
@@ -17,6 +19,9 @@ def gold_room():
 
 
 def bear_room():
+    """
+    Can you beat the bear?
+    """
     print "There is a bear here."
     print "The bear has a bunch of honey."
     print "The fat bear is in front of another door."
@@ -30,6 +35,7 @@ def bear_room():
             dead("The bear looks at you then slaps your face off.")
         elif next == "taunt bear" and not bear_moved:
             print "The bear has move from the door. You can go through it now."
+            bear_moved = True
         elif next == "taunt bear" and bear_moved:
             dead("The bear gets pissed off and chews your leg off.")
         elif next == "open door" and bear_moved:
